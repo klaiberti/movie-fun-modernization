@@ -32,13 +32,12 @@ public class Album implements Serializable {
 
     private String artist;
     private String title;
-    private int year;
-    private int rating;
+    private Integer year;
+    private Integer rating;
 
-    public Album() {
-    }
+    public Album() { }
 
-    public Album(String artist, String title, int year, int rating) {
+    public Album(String artist, String title, Integer year, Integer rating) {
         this.artist = artist;
         this.title = title;
         this.year = year;
@@ -73,19 +72,19 @@ public class Album implements Serializable {
         this.title = title;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
-    public int getRating() {
+    public Integer getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Integer rating) {
         this.rating = rating;
     }
 
@@ -104,5 +103,9 @@ public class Album implements Serializable {
     private static <T> boolean isEqual(T one, T other) {
         if (one != null ? !one.equals(other) : other != null) return false;
         return true;
+    }
+
+    public String toString() {
+        return "Album Artist: " + artist + " Title: " + title + " Year: " + year + " Rating: " + rating;
     }
 }
